@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 import sys
-import os
 from cmd import Cmd
 
 import libtmux
@@ -11,7 +10,6 @@ class Shell(Cmd):
     def __init__(self, *args):
         self.args = args
         self.server = libtmux.Server()
-        self.s_name = os.environ['TMUX'].split(',')[2]
         self.infos = {}
         for pbx in args:
             session = self.server.find_where({'session_name': pbx})
