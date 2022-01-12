@@ -9,5 +9,5 @@ setuptools.setup(
 
     # Project uses reStructuredText, so ensure that the docutils get
     # installed or upgraded on the target machine
-    install_requires=["libtmux==0.8.2"],
+    install_requires=["libtmux==0.10.3"],
 )
